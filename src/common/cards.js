@@ -500,6 +500,61 @@ const Cards = [
         gem: Gems.BLUE,
         imageCode: "LAPIDARY_BLUE",
         cost: [{ gem: Gems.BLUE, qty: 6 }]
+    },
+    {
+        id: 53,
+        level: 2,
+        victoryPoints: 1,
+        gem: Gems.WHITE,
+        imageCode: "PEOPLE_SNOW",
+        cost: [{ gem: Gems.GREEN, qty: 3 },
+            { gem: Gems.RED, qty: 2 },
+            { gem: Gems.BLACK, qty: 2 }]
+    },
+    {
+        id: 54,
+        level: 2,
+        victoryPoints: 1,
+        gem: Gems.WHITE,
+        imageCode: "PEOPLE_SNOW",
+        cost: [{ gem: Gems.WHITE, qty: 2 },
+            { gem: Gems.BLUE, qty: 3 },
+            { gem: Gems.RED, qty: 3 }]
+    },
+    {
+        id: 55,
+        level: 2,
+        victoryPoints: 2,
+        gem: Gems.WHITE,
+        imageCode: "PEOPLE_SNOW",
+        cost: [{ gem: Gems.GREEN, qty: 1 },
+            { gem: Gems.BLACK, qty: 2 },
+            { gem: Gems.RED, qty: 4 }]
+    },
+    {
+        id: 56,
+        level: 2,
+        victoryPoints: 2,
+        gem: Gems.WHITE,
+        imageCode: "LAPIDARY_WHITE",
+        cost: [{ gem: Gems.BLACK, qty: 3 },
+            { gem: Gems.RED, qty: 5 }]
+    },
+    {
+        id: 57,
+        level: 2,
+        victoryPoints: 2,
+        gem: Gems.WHITE,
+        imageCode: "LAPIDARY_WHITE",
+        cost: [{ gem: Gems.RED, qty: 5 }]
+    },
+    {
+        id: 58,
+        level: 2,
+        victoryPoints: 3,
+        gem: Gems.WHITE,
+        imageCode: "LAPIDARY_WHITE",
+        cost: [{ gem: Gems.WHITE, qty: 6 }]
     }
     
 ];

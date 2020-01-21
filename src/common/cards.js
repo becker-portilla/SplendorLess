@@ -555,8 +555,307 @@ const Cards = [
         gem: Gems.WHITE,
         imageCode: "LAPIDARY_WHITE",
         cost: [{ gem: Gems.WHITE, qty: 6 }]
+    },
+    {
+        id: 59,
+        level: 2,
+        victoryPoints: 1,
+        gem: Gems.GREEN,
+        imageCode: "GUY_GREEN",
+        cost: [{ gem: Gems.WHITE, qty: 3 },
+            { gem: Gems.GREEN, qty: 2 },
+            { gem: Gems.RED, qty: 3 }]
+    },
+    {
+        id: 60,
+        level: 2,
+        victoryPoints: 1,
+        gem: Gems.GREEN,
+        imageCode: "GUY_GREEN",
+        cost: [{ gem: Gems.WHITE, qty: 2 },
+            { gem: Gems.BLUE, qty: 3 },
+            { gem: Gems.BLACK, qty: 2 }]
+    },
+    {
+        id: 61,
+        level: 2,
+        victoryPoints: 2,
+        gem: Gems.GREEN,
+        imageCode: "GUY_GREEN",
+        cost: [{ gem: Gems.WHITE, qty: 4 },
+            { gem: Gems.BLUE, qty: 2 },
+            { gem: Gems.BLACK, qty: 1 }]
+    },
+    {
+        id: 62,
+        level: 2,
+        victoryPoints: 2,
+        gem: Gems.GREEN,
+        imageCode: "CARRACK",
+        cost: [{ gem: Gems.GREEN, qty: 3 },
+            { gem: Gems.BLUE, qty: 5 }]
+    },
+    {
+        id: 63,
+        level: 2,
+        victoryPoints: 2,
+        gem: Gems.GREEN,
+        imageCode: "CARRACK",
+        cost: [{ gem: Gems.GREEN, qty: 5 }]
+    },
+    {
+        id: 64,
+        level: 2,
+        victoryPoints: 3,
+        gem: Gems.GREEN,
+        imageCode: "CARRACK",
+        cost: [{ gem: Gems.GREEN, qty: 6 }]
+    },
+    {
+        id: 65,
+        level: 2,
+        victoryPoints: 1,
+        gem: Gems.RED,
+        imageCode: "FELUCCA",
+        cost: [{ gem: Gems.WHITE, qty: 2 },
+            { gem: Gems.RED, qty: 2 },
+            { gem: Gems.BLACK, qty: 3 }]
+    },
+    {
+        id: 66,
+        level: 2,
+        victoryPoints: 1,
+        gem: Gems.RED,
+        imageCode: "FELUCCA",
+        cost: [{ gem: Gems.BLUE, qty: 3 },
+            { gem: Gems.RED, qty: 2 },
+            { gem: Gems.BLACK, qty: 3 }]
+    },
+    {
+        id: 67,
+        level: 2,
+        victoryPoints: 2,
+        gem: Gems.RED,
+        imageCode: "FELUCCA",
+        cost: [{ gem: Gems.WHITE, qty: 1 },
+            { gem: Gems.BLUE, qty: 4 },
+            { gem: Gems.GREEN, qty: 2 }]
+    },
+    {
+        id: 68,
+        level: 2,
+        victoryPoints: 2,
+        gem: Gems.RED,
+        imageCode: "LAPIDARY_RED",
+        cost: [{ gem: Gems.WHITE, qty: 3 },
+            { gem: Gems.BLACK, qty: 5 }]
+    },
+    {
+        id: 69,
+        level: 2,
+        victoryPoints: 2,
+        gem: Gems.RED,
+        imageCode: "LAPIDARY_RED",
+        cost: [{ gem: Gems.BLACK, qty: 5 }]
+    },
+    {
+        id: 70,
+        level: 2,
+        victoryPoints: 3,
+        gem: Gems.RED,
+        imageCode: "LAPIDARY_RED",
+        cost: [{ gem: Gems.RED, qty: 6 }]
+    },
+    {
+        id: 71,
+        level: 3,
+        victoryPoints: 3,
+        gem: Gems.BLACK,
+        imageCode: "STREET_1",
+        cost: [{ gem: Gems.WHITE, qty: 3 },
+            { gem: Gems.BLUE, qty: 3 },
+            { gem: Gems.GREEN, qty: 5 },
+            { gem: Gems.RED, qty: 3 }]
+    },
+    {
+        id: 72,
+        level: 3,
+        victoryPoints: 4,
+        gem: Gems.BLACK,
+        imageCode: "STREET_2",
+        cost: [{ gem: Gems.RED, qty: 7 }]
+    },
+    {
+        id: 73,
+        level: 3,
+        victoryPoints: 4,
+        gem: Gems.BLACK,
+        imageCode: "STREET_2",
+        cost: [{ gem: Gems.GREEN, qty: 3 },
+            { gem: Gems.RED, qty: 6 },
+            { gem: Gems.BLACK, qty: 3 }]
+    },
+    {
+        id: 74,
+        level: 3,
+        victoryPoints: 5,
+        gem: Gems.BLACK,
+        imageCode: "STREET_1",
+        cost: [{ gem: Gems.RED, qty: 7 },
+            { gem: Gems.BLACK, qty: 3 }]
+    },
+    {
+        id: 75,
+        level: 3,
+        victoryPoints: 3,
+        gem: Gems.BLUE,
+        imageCode: "VENICE",
+        cost: [{ gem: Gems.WHITE, qty: 3 },
+            { gem: Gems.GREEN, qty: 3 },
+            { gem: Gems.RED, qty: 3 },
+            { gem: Gems.BLACK, qty: 5 }]
+    },
+    {
+        id: 76,
+        level: 3,
+        victoryPoints: 4,
+        gem: Gems.BLUE,
+        imageCode: "VENICE",
+        cost: [{ gem: Gems.WHITE, qty: 7 }]
+    },
+    {
+        id: 77,
+        level: 3,
+        victoryPoints: 4,
+        gem: Gems.BLUE,
+        imageCode: "DIAMANT_SHOP",
+        cost: [{ gem: Gems.WHITE, qty: 6 },
+            { gem: Gems.BLUE, qty: 3 },
+            { gem: Gems.BLACK, qty: 3 }]
+    },
+    {
+        id: 78,
+        level: 3,
+        victoryPoints: 5,
+        gem: Gems.BLUE,
+        imageCode: "DIAMANT_SHOP",
+        cost: [{ gem: Gems.WHITE, qty: 7 },
+            { gem: Gems.BLUE, qty: 3 }]
+    },
+    {
+        id: 79,
+        level: 3,
+        victoryPoints: 3,
+        gem: Gems.WHITE,
+        imageCode: "BUILDING_WHITE",
+        cost: [{ gem: Gems.GREEN, qty: 3 },
+            { gem: Gems.BLUE, qty: 3 },
+            { gem: Gems.RED, qty: 5 },
+            { gem: Gems.BLACK, qty: 3 }]
+    },
+    {
+        id: 80,
+        level: 3,
+        victoryPoints: 4,
+        gem: Gems.WHITE,
+        imageCode: "GIOIELLERIA",
+        cost: [{ gem: Gems.BLACK, qty: 7 }]
+    },
+    {
+        id: 81,
+        level: 3,
+        victoryPoints: 4,
+        gem: Gems.WHITE,
+        imageCode: "GIOIELLERIA",
+        cost: [{ gem: Gems.WHITE, qty: 3 },
+            { gem: Gems.RED, qty: 3 },
+            { gem: Gems.BLACK, qty: 6 }]
+    },
+    {
+        id: 82,
+        level: 3,
+        victoryPoints: 5,
+        gem: Gems.WHITE,
+        imageCode: "BUILDING_WHITE",
+        cost: [{ gem: Gems.WHITE, qty: 3 },
+            { gem: Gems.BLACK, qty: 7 }]
+    },
+    {
+        id: 83,
+        level: 3,
+        victoryPoints: 3,
+        gem: Gems.GREEN,
+        imageCode: "TIMBERED_HOUSE",
+        cost: [{ gem: Gems.WHITE, qty: 5 },
+            { gem: Gems.BLACK, qty: 3 },
+            { gem: Gems.BLUE, qty: 3 },
+            { gem: Gems.RED, qty: 3 }]
+    },
+    {
+        id: 84,
+        level: 3,
+        victoryPoints: 4,
+        gem: Gems.GREEN,
+        imageCode: "BRIDGE",
+        cost: [{ gem: Gems.BLUE, qty: 7 }]
+    },
+    {
+        id: 85,
+        level: 3,
+        victoryPoints: 4,
+        gem: Gems.GREEN,
+        imageCode: "BRIDGE",
+        cost: [{ gem: Gems.WHITE, qty: 3 },
+            { gem: Gems.BLUE, qty: 6 },
+            { gem: Gems.GREEN, qty: 3 }]
+    },
+    {
+        id: 86,
+        level: 3,
+        victoryPoints: 5,
+        gem: Gems.GREEN,
+        imageCode: "TIMBERED_HOUSE",
+        cost: [{ gem: Gems.BLUE, qty: 7 },
+            { gem: Gems.GREEN, qty: 3 }]
+    },
+    {
+        id: 87,
+        level: 3,
+        victoryPoints: 3,
+        gem: Gems.RED,
+        imageCode: "EQUESTRIAN_STATUE",
+        cost: [{ gem: Gems.WHITE, qty: 3 },
+            { gem: Gems.BLUE, qty: 5 },
+            { gem: Gems.GREEN, qty: 3 },
+            { gem: Gems.BLACK, qty: 3 }]
+    },
+    {
+        id: 88,
+        level: 3,
+        victoryPoints: 4,
+        gem: Gems.RED,
+        imageCode: "EQUESTRIAN_STATUE",
+        cost: [{ gem: Gems.GREEN, qty: 7 }]
+    },
+    {
+        id: 89,
+        level: 3,
+        victoryPoints: 4,
+        gem: Gems.RED,
+        imageCode: "BUILDING_RED",
+        cost: [{ gem: Gems.BLUE, qty: 3 },
+            { gem: Gems.GREEN, qty: 6 },
+            { gem: Gems.RED, qty: 3 }]
+    },
+    {
+        id: 90,
+        level: 3,
+        victoryPoints: 5,
+        gem: Gems.RED,
+        imageCode: "BUILDING_RED",
+        cost: [{ gem: Gems.GREEN, qty: 7 },
+            { gem: Gems.RED, qty: 3 }]
     }
-    
 ];
 
 export default Cards;

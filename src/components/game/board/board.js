@@ -13,15 +13,16 @@ function Board(props){
     Util.shuffle(cardsL3);
     return (
         <div>
-            {ShowCards(cardsL1)}
-            {ShowCards(cardsL2)}
-            {ShowCards(cardsL3)}
+            {ShowCards(cardsL3, 3)}
+            {ShowCards(cardsL2, 2)}
+            {ShowCards(cardsL1, 1)}
         </div>
     );
 }
 
-function ShowCards(list){
+function ShowCards(list, level){
     return (<div className="cards-level">
+        <div className={"card card-level-" + level}></div>
         {list.slice(0, 4).map(x=>{
             return (<Card IdCard={x.id}></Card>)
         })}

@@ -22,7 +22,7 @@ function Card(props) {
     <div className="card-bottom">
       {
         card.cost.map(c=>{
-          return (<div className={"card-cost card-gem-" + card.gem}> {c.qty} </div>)
+          return (<div className="card-cost"> <span className={"card-cost-gem card-cost-gem-" + c.gem}>{c.qty}</span> </div>)
         })
       }
     </div>

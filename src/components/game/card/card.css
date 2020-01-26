@@ -99,25 +99,68 @@
 }
 
 .card-gem-ONYX{
-    background-color: darkslategray;
+    background-color: transparent;
+    background-image: url("../../../assets/images/onyx.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card-gem-SAPPHIRE{
-    background-color: cornflowerblue;
+    background-color: transparent;
+    background-image: url("../../../assets/images/sapphire.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.card-gem-DIAMONT{
-    background-color: silver;
+.card-gem-DIAMOND{
+    background-color: transparent;
+    background-image: url("../../../assets/images/diamond.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card-gem-ESMERALD{
-    background-color: seagreen;
+    background-color: transparent;
+    background-image: url("../../../assets/images/esmerald.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card-gem-RUBY{
-    background-color: firebrick;
+    background-color: transparent;
+    background-image: url("../../../assets/images/ruby.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card-gem-GOLD{
-    background-color: gold;
+    background-color: transparent;
+    background-image: url("../../../assets/images/gold.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-cost-gem-RUBY{
+    background: rgb(255,171,0);
+    background: radial-gradient(circle, rgba(255,171,0,1) 0%, rgba(255,0,0,1) 35%, rgba(1,23,28,1) 100%);
+}
+
+.card-cost-gem-ESMERALD{
+    background: rgb(223,255,0);
+    background: radial-gradient(circle, rgba(223,255,0,1) 0%, rgba(10,163,7,1) 35%, rgba(1,23,28,1) 100%);
+}
+
+.card-cost-gem-DIAMOND{
+    background: rgb(215,218,193);
+    background: radial-gradient(circle, rgba(215,218,193,1) 0%, rgba(255,255,255,1) 35%, rgba(1,23,28,1) 100%);
+}
+
+.card-cost-gem-SAPPHIRE{
+    background: rgb(0,176,255);
+    background: radial-gradient(circle, rgba(0,176,255,1) 0%, rgba(0,78,255,1) 35%, rgba(1,23,28,1) 100%);
+}
+
+.card-cost-gem-ONYX{
+    background: rgb(173,101,75);
+    background: radial-gradient(circle, rgba(173,101,75,1) 0%, rgba(0,0,0,1) 35%, rgba(1,23,28,1) 100%);
 }

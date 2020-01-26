@@ -5,6 +5,7 @@
   margin: 10px;
   border: solid;
   position: relative;
+  background-size: cover;
 }
 
 .card-vp{

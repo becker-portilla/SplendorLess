@@ -1,105 +1,104 @@
 .card-MINE_BLACK{
-    background-color: dimgray;
+    background-image: url("../../../assets/images/test-back1.jpg");
 }
 
 .card-MINE_BLUE{
-    background-color: blue;
+    background-image: url("../../../assets/images/test-back2.jpg");
 }
 
 .card-MINE_WHITE{
-    background-color: white;
+    background-image: url("../../../assets/images/test-back3.jpg");
 }
 
 .card-MINE_GREEN{
-    background-color: green;
+    background-image: url("../../../assets/images/test-back4.jpg");
 }
 
 .card-MINE_RED{
-    background-color: red;
+    background-image: url("../../../assets/images/test-back5.jpg");
 }
 
 .card-CAMELS{
-    background-color: rosybrown;
+    background-image: url("../../../assets/images/test-back6.jpg");
 }
 
 .card-LAPIDARY_BLACK{
-    background-color: grey;
+    background-image: url("../../../assets/images/test-back7.jpg");
 }
 
 .card-ELEPHANTS{
-    background-color: lightblue;
+    background-image: url("../../../assets/images/test-back8.jpg");
 }
 
 .card-LAPIDARY_BLUE{
-    background-color: lightskyblue;
+    background-image: url("../../../assets/images/test-back9.jpg");
 }
 
 .card-PEOPLE_SNOW{
-    background-color: lightslategrey;
+    background-image: url("../../../assets/images/test-back10.jpg");
 }
 
 .card-LAPIDARY_WHITE{
-    background-color: linen;
+    background-image: url("../../../assets/images/test-back11.jpg");
 }
 
 .card-GUY_GREEN{
-    background-color: mediumseagreen;
+    background-image: url("../../../assets/images/test-back12.jpg");
 }
 
 .card-CARRACK{
-    background-color: brown;
+    background-image: url("../../../assets/images/test-back13.jpg");
 }
 
 .card-FELUCCA{
-    background-color: burlywood;
+    background-image: url("../../../assets/images/test-back14.jpg");
 }
 
 .card-LAPIDARY_RED{
-    background-color: crimson;
+    background-image: url("../../../assets/images/test-back15.jpg");
 }
 
 .card-STREET_1{
-    background-color: darkmagenta;
+    background-image: url("../../../assets/images/test-back16.jpg");
 }
 
 .card-STREET_2{
-    background-color: darkolivegreen;
+    background-image: url("../../../assets/images/test-back17.jpg");
 }
 
 .card-VENICE{
-    background-color: darkorange;
+    background-image: url("../../../assets/images/test-back18.jpg");
 }
 
 .card-DIAMANT_SHOP{
-    background-color: darkslategray;
+    background-image: url("../../../assets/images/test-back19.jpg");
 }
 
 .card-BUILDING_WHITE{
-    background-color: dodgerblue;
+    background-image: url("../../../assets/images/test-back20.jpg");
 }
 
 .card-GIOIELLERIA{
-    background-color: goldenrod;
+    background-image: url("../../../assets/images/test-back21.jpg");
 }
 
 .card-TIMBERED_HOUSE{
-    background-color: hotpink;
+    background-image: url("../../../assets/images/test-back22.jpg");
 }
 
 .card-BRIDGE{
-    background-color: khaki;
+    background-image: url("../../../assets/images/test-back23.jpg");
 }
 
-.card-EQUESTIAN_STATUE{
-    background-color: lightcoral;
+.card-EQUESTRIAN_STATUE{
+    background-image: url("../../../assets/images/test-back24.jpg");
 }
 
 .card-BUILDING_RED{
-    background-color: tomato;
+    background-image: url("../../../assets/images/test-back25.jpg");
 }
 
 .card-gem-ONYX{
-    background-color: transparent;
     background-image: url("../../../assets/images/onyx.png");
     background-repeat: no-repeat;
     background-size: cover;

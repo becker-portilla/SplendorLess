@@ -11,7 +11,6 @@ function Board(props){
     Util.shuffle(cardsL1);
     Util.shuffle(cardsL2);
     Util.shuffle(cardsL3);
-
     return (
         <div>
             {ShowCards(cardsL1)}

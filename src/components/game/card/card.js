@@ -1,5 +1,6 @@
 import React from 'react';
 import Cards from '../../../common/cards';
+import './card.css';
 
 /*props: 
     idCard (int)
@@ -16,12 +17,12 @@ function Card(props) {
             return (<div className="card-vp">{card.victoryPoints}</div>)
         })(card)
       }
-      <div className={"card-gem card-gem-" + card.gem}>{card.gem[0]}</div>
+      <div className={"card-gem card-gem-" + card.gem}></div>
     </div>
     <div className="card-bottom">
       {
         card.cost.map(c=>{
-          return (<div className="card-cost"> {c.gem[0]} <span>{c.qty}</span> </div>)
+          return (<div className={"card-cost card-gem-" + card.gem}> {c.qty} </div>)
         })
       }
     </div>

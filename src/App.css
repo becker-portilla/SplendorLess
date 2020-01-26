@@ -3,6 +3,8 @@
   height: 200px;
   float: left;
   margin: 10px;
+  border: solid;
+  position: relative;
 }
 
 .card-vp{
@@ -11,6 +13,20 @@
 
 .card-gem{
   float: right;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.card-cost{
+  float: left;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
 }
 
 .cards-level:after,
@@ -18,4 +34,15 @@
   content: "";
   display: table;
   clear: both;
+}
+
+.card-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.card-bottom:after{
+content: '';
+display: table;
+clear: both;
 }

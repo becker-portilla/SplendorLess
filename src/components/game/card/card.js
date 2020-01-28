@@ -1,28 +1,32 @@
 import React from 'react';
-import Cards from '../../../common/cards';
 import './card.css';
 
 /*props: 
-    idCard (int)
+    Card ({})
+    IsNoble (bool)
 */
 function Card(props) {
-    let card = Cards.Cards.filter(x=>x.id == props.IdCard)[0];
+    let card = props.Card;
     
   return (
-  <div className={"card card-" + card.imageCode}>
+  <div className={(props.IsNoble ? "card-noble" : "card") + " card-" + card.imageCode }>
     <div className="card-top">
       {
         ((card) => {
+          let ret = [];
           if(card.victoryPoints > 0)
-            return (<div className="card-vp">{card.victoryPoints}</div>)
+            ret.push(<div className="card-vp">{card.victoryPoints}</div>);
+          if(!props.IsNoble)
+            ret.push(<div className={"card-gem card-gem-" + card.gem}></div>);
+
+            return ret;
         })(card)
       }
-      <div className={"card-gem card-gem-" + card.gem}></div>
     </div>
     <div className="card-bottom">
       {
         card.cost.map(c=>{
-          return (<div className="card-cost"> <span className={"card-cost-gem card-cost-gem-" + c.gem}>{c.qty}</span> </div>)
+          return (<div className="card-cost"> <span className={(props.IsNoble ? "card-noble-cost-gem" : "card-cost-gem") + " card-cost-gem-" + c.gem}>{c.qty}</span> </div>)
         })
       }
     </div>

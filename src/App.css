@@ -8,6 +8,16 @@
   background-size: cover;
 }
 
+.card-noble {
+  width: 140px;
+  height: 180px;
+  float: left;
+  margin: 10px;
+  border: solid;
+  position: relative;
+  background-size: cover;
+}
+
 .card-vp{
   float: left;
   margin-top: 0px;

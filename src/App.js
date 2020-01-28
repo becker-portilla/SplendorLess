@@ -5,7 +5,7 @@ import Board from './components/game/board/board';
 
 function App() {
   return (
-    <Board></Board>
+    <Board PlayersQty={4}></Board>
   );
 }
 

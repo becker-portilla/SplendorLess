@@ -21,7 +21,7 @@ function GenerateCards(){
     };
 
     board.hiddenCards.forEach(c => {
-        c.cards = Cards.filter(x=> x.level == c.level);
+        c.cards = Cards.Cards.filter(x=> x.level == c.level);
         Util.shuffle(c.cards);
         let openCards = { level: c.level, cards:[] }
         for (let i = 0; i < board.openCardsQty; i++) {

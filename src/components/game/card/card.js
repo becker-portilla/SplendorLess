@@ -6,7 +6,7 @@ import './card.css';
     idCard (int)
 */
 function Card(props) {
-    let card = Cards.filter(x=>x.id == props.IdCard)[0];
+    let card = Cards.Cards.filter(x=>x.id == props.IdCard)[0];
     
   return (
   <div className={"card card-" + card.imageCode}>

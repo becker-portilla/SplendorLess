@@ -1,32 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Cards from '../../../common/cards';
 import Card from '../card/card';
 import Util from '../../../common/utils';
 
 function Board(props){
-    let cardsL1 = Cards.filter(x=> x.level == 1);
-    let cardsL2 = Cards.filter(x=> x.level == 2);
-    let cardsL3 = Cards.filter(x=> x.level == 3);
+    const [board, setBoard] = useState(GenerateCards());
 
-    Util.shuffle(cardsL1);
-    Util.shuffle(cardsL2);
-    Util.shuffle(cardsL3);
     return (
         <div>
-            {ShowCards(cardsL3, 3)}
-            {ShowCards(cardsL2, 2)}
-            {ShowCards(cardsL1, 1)}
+            {board.openCards.map(c=>ShowCards(c))}
         </div>
     );
 }
 
-function ShowCards(list, level){
+function GenerateCards(){
+    let board = {
+        hiddenCards : [{level: 3}, {level: 2}, {level: 1}],
+        openCards : [],
+        openCardsQty: 4
+    };
+
+    board.hiddenCards.forEach(c => {
+        c.cards = Cards.filter(x=> x.level == c.level);
+        Util.shuffle(c.cards);
+        let openCards = { level: c.level, cards:[] }
+        for (let i = 0; i < board.openCardsQty; i++) {
+            openCards.cards.push(c.cards.pop());
+        }
+        board.openCards.push(openCards);
+    });
+
+    return board;
+}
+
+function ShowCards(cardsObj){
     return (<div className="cards-level">
-        <div className={"card card-level-" + level}></div>
-        {list.slice(0, 4).map(x=>{
-            return (<Card IdCard={x.id}></Card>)
+        <div className={"card card-level-" + cardsObj.level}></div>
+        {cardsObj.cards.map(x=>{
+            return (<Card IdCard={x.id} ></Card>)
         })}
         </div>)
 }
+
 
 export default Board;

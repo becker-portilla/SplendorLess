@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import Cards from '../../../common/cards';
 import Card from '../card/card';
+import Noble from '../card/noble';
+import Dummy from '../card/dummy';
 import Util from '../../../common/utils';
 
 function Board(props){
     const [board, setBoard] = useState(GenerateCards(props));
 
+    const onClickCard = e => {
+        let newOpenCards = ChangeCard(board.hiddenCards, board.openCards, e.id);
+        board.openCards = newOpenCards;
+        console.log(board);
+        setBoard(board);
+    };
+    //{ShowNobles(board.nobleCards)} 
     return (
         <div>
-            {ShowCards(board.nobleCards, true)}
-            {board.openCards.map(c=>ShowCards(c, false))}
+            {board.openCards.map(c=>ShowCards(c, onClickCard))}
         </div>
     );
 }
@@ -38,20 +46,38 @@ function GenerateCards(props){
     return board;
 }
 
-function ShowCards(cardsObj, isNoble){
+function ShowCards(cardsObj, clickCardHandle){
     return (<div className="cards-level">
-        {
-            ((cardsObj) => {
-                if(cardsObj.level)
-                    return <div className={"card card-level-" + cardsObj.level}></div>
-            })(cardsObj)
-        }
-
+        {<Dummy ClassStyle={"card card-level-" + cardsObj.level}></Dummy>}
         {cardsObj.cards.map(x=>{
-            return (<Card Card={x} IsNoble={isNoble} ></Card>)
+            if(x.isDummy)
+                return (<Dummy ClassStyle="card-empty"></Dummy>)
+            else
+                return (<Card Card={x} onClick={clickCardHandle}></Card>)
         })}
         </div>)
 }
 
+function ShowNobles(cardsObj){
+    return (<div className="cards-level">
+        {cardsObj.cards.map(x=>{
+            if(x.isDummy)
+                return (<Dummy ClassStyle="card-noble-empty"></Dummy>)
+            else
+                return (<Noble Card={x} ></Noble>)
+        })}
+        </div>)
+}
+
+function ChangeCard(fromList, toList, idCard){
+    let newCard = fromList.length > 0 ? fromList.pop() : {isDummy:true};
+    
+    for (let i = 0; i < toList.length; i++) {
+        if(toList[i].id == idCard)
+        toList[i] = newCard;
+    }
+
+    return toList;
+}
 
 export default Board;

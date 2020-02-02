@@ -8,6 +8,12 @@
   background-size: cover;
 }
 
+.card-empty{
+  width: 140px;
+  height: 230px;
+  float: left;
+}
+
 .card-noble {
   width: 140px;
   height: 180px;

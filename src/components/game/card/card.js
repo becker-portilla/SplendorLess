@@ -15,16 +15,14 @@ function Card(props) {
         ((card) => {
           let ret = [];
           if(card.victoryPoints > 0)
-            ret.push(<div className="card-vp">{card.victoryPoints}</div>);
-
-            return ret;
+            return <div className="card-vp">{card.victoryPoints}</div>;
         })(card)
       }
     </div>
     <div className="card-bottom">
       {
         card.cost.map(c=>{
-          return (<div className="card-cost"> <span className={"card-cost-gem card-cost-gem-" + c.gem}>{c.qty}</span> </div>)
+          return (<div className="card-cost" key={card.id + '-' + c.gem + '-' + c.qty}> <span className={"card-cost-gem card-cost-gem-" + c.gem}>{c.qty}</span> </div>)
         })
       }
     </div>

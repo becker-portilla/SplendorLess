@@ -3,23 +3,68 @@ import Cards from '../../../common/cards';
 import Card from '../card/card';
 import Noble from '../card/noble';
 import Dummy from '../card/dummy';
+import RowCards from './rowCards';
 import Util from '../../../common/utils';
 
 function Board(props){
-    const [board, setBoard] = useState(GenerateCards(props));
+    let [l1, l2, l3, hiddenCards] = GenerateCards(props);
+    const [opnCardsL1, setOpnCardsL1] = useState(l1);
+    const [opnCardsL2, setOpnCardsL2] = useState(l2);
+    const [opnCardsL3, setOpnCardsL3] = useState(l3);
+    const [idTest, setIdTest] = useState(0);
+
+    SetHiddenCards(hiddenCards.filter(x=>x.level === 1)[0].cards, 1);
+    SetHiddenCards(hiddenCards.filter(x=>x.level === 2)[0].cards, 2);
+    SetHiddenCards(hiddenCards.filter(x=>x.level === 2)[0].cards, 3);
 
     const onClickCard = e => {
-        let newOpenCards = ChangeCard(board.hiddenCards, board.openCards, e.id);
-        board.openCards = newOpenCards;
-        console.log(board);
-        setBoard(board);
+        setIdTest(e.id);
+        switch (e.level) {
+            case 1:
+                setOpnCardsL1(ChangeCard(opnCardsL1, e.id, e.level));
+                break;
+            case 2:
+                setOpnCardsL2(ChangeCard(opnCardsL2, e.id, e.level));
+                break;
+            case 3:
+                setOpnCardsL3(ChangeCard(opnCardsL3, e.id, e.level));
+                break;
+        }
     };
-    //{ShowNobles(board.nobleCards)} 
+    // //{ShowNobles(board.nobleCards)} 
     return (
         <div>
-            {board.openCards.map(c=>ShowCards(c, onClickCard))}
+            <RowCards Cards={opnCardsL3} onClick={onClickCard}></RowCards>
+            <RowCards Cards={opnCardsL2} onClick={onClickCard}></RowCards>
+            <RowCards Cards={opnCardsL1} onClick={onClickCard}></RowCards>
         </div>
     );
+}
+
+function GetCard(idCard){
+    return Cards.Cards.filter(x=> x.id === idCard)[0];
+}
+
+function GetHiddenCards(level){
+    switch (level) {
+        case 1:
+            return JSON.parse(sessionStorage.getItem('HiddenCards1'));
+        case 2:
+            return JSON.parse(sessionStorage.getItem('HiddenCards2'));
+        case 3:
+            return JSON.parse(sessionStorage.getItem('HiddenCards3'));
+    }
+}
+
+function SetHiddenCards(hiddenCards, level){
+    switch (level) {
+        case 1:
+            sessionStorage.setItem('HiddenCards1', JSON.stringify(hiddenCards));
+        case 2:
+            sessionStorage.setItem('HiddenCards2', JSON.stringify(hiddenCards));
+        case 3:
+            sessionStorage.setItem('HiddenCards3', JSON.stringify(hiddenCards));
+    }
 }
 
 function GenerateCards(props){
@@ -43,7 +88,7 @@ function GenerateCards(props){
     Util.shuffle(nobleCards);
     board.nobleCards = { cards : nobleCards.slice(0, props.PlayersQty + 1)};
 
-    return board;
+    return [board.openCards[2], board.openCards[1], board.openCards[0], board.hiddenCards];
 }
 
 function ShowCards(cardsObj, clickCardHandle){
@@ -53,7 +98,7 @@ function ShowCards(cardsObj, clickCardHandle){
             if(x.isDummy)
                 return (<Dummy ClassStyle="card-empty"></Dummy>)
             else
-                return (<Card Card={x} onClick={clickCardHandle}></Card>)
+                return (<Card Card={x} onClick={clickCardHandle} key={x.id}></Card>)
         })}
         </div>)
 }
@@ -69,13 +114,21 @@ function ShowNobles(cardsObj){
         </div>)
 }
 
-function ChangeCard(fromList, toList, idCard){
+function ChangeCard(toList, idCard, level){
+console.log(JSON.stringify(toList));
+console.log(idCard);
+    let fromList = GetHiddenCards(level);
     let newCard = fromList.length > 0 ? fromList.pop() : {isDummy:true};
+console.log(newCard);
     
-    for (let i = 0; i < toList.length; i++) {
-        if(toList[i].id == idCard)
-        toList[i] = newCard;
+    SetHiddenCards(fromList, level);
+
+    for (let i = 0; i < toList.cards.length; i++) {
+        if(toList.cards[i].id == idCard){
+            toList.cards[i] = newCard;
+        }
     }
+    console.log(toList);
 
     return toList;
 }

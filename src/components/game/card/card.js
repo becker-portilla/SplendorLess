@@ -1,15 +1,16 @@
 import React from 'react';
+import Util from '../../../common/utils';
 import './card.css';
 
 /*props: 
-    Card ({})
+    IdCard (int)
     onClick (event)
 */
 function Card(props) {
-    let card = props.Card;
-    
+  let card = Util.GetCard(props.IdCard);
+
   return (
-  <div className={"card card-" + card.imageCode } onClick={e => props.onClick(card)}>
+  <div className={"card card-" + card.imageCode } onClick={e => props.onClick(card.id)}>
     <div className="card-top">
       {
         ((card) => {
@@ -18,6 +19,7 @@ function Card(props) {
             return <div className="card-vp">{card.victoryPoints}</div>;
         })(card)
       }
+      <div className={"card-gem card-gem-" + card.gem}></div>
     </div>
     <div className="card-bottom">
       {
@@ -28,4 +30,5 @@ function Card(props) {
     </div>
   </div>);
 }
+
 export default Card;

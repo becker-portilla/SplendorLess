@@ -1,3 +1,5 @@
+import Cards from './cards';
+
 /**
  * Randomly shuffle an array
  * https://stackoverflow.com/a/2450976/1293256
@@ -25,4 +27,37 @@ function shuffle (array) {
 
 };
 
-export default {shuffle}
+function GetCard(idCard){
+	return Cards.Cards.filter(x=>x.id === idCard)[0];
+}
+
+function GetCardsByLevel(level){
+	let cardsStorage = GetCardsFromStorage(level);
+	if(cardsStorage)
+		return cardsStorage;
+
+	let cards = Cards.Cards.filter(x=>x.level === level).map(x=>x.id);
+	shuffle(cards);
+
+	return cards;
+}
+
+function SaveCardsByLevel(cards, level){
+	sessionStorage.setItem('hiddenCards_' + level, JSON.stringify(cards));
+}
+
+function GetCardsFromStorage(level){
+	let cards = sessionStorage.getItem('hiddenCards_' + level)
+	if(cards)
+		return JSON.parse(cards);
+}
+
+function IsDummyCard(idCard){
+	return idCard === -1;
+}
+
+function GetDummyCard(){
+	return -1;
+}
+
+export default {shuffle, GetCard, GetCardsByLevel, SaveCardsByLevel, IsDummyCard, GetDummyCard}

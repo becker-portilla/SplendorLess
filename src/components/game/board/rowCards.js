@@ -12,7 +12,6 @@ function RowCards(props){
 
     const hiddenCards = Utils.GetCardsByLevel(level);
     const [openCards, setOpenCards] = props.StateCards;
-    const [selectedCard, setSelectedCard] = useState(-1); //use for render trigger
 
     if(openCards.length === 0){
         setOpenCards(GetOpenCards(hiddenCards));
@@ -20,7 +19,6 @@ function RowCards(props){
     }
 
     const onClickCard = e => {
-        setSelectedCard(e);
         setOpenCards(ChangeCard(openCards, e, level));
     };
 
@@ -58,7 +56,7 @@ function ChangeCard(toList, idCard, level){
         }
     }
 
-    return toList;
+    return toList.slice(0);
 }
 
 export default RowCards;

@@ -22,6 +22,7 @@
   margin: 10px;
   border: solid;
   position: relative;
+  border-radius: 5%;
   background-size: cover;
 }
 
@@ -48,6 +49,7 @@
   width: 100%;
 }
 
+.card-noble-cost-gem,
 .card-cost-gem{
   float: left;
   border-radius: 50%;
@@ -66,6 +68,10 @@
   border-style: solid;
 }
 
+.card-noble-cost-gem{
+  border-radius: 20%;
+}
+
 .cards-level:after,
 .card-top:after{
   content: "";
@@ -81,15 +87,15 @@
 }
 
 .card-level-1{
-  background-color: blue;
+    background-image: url("./assets/images/test-levelBlue.jpg");
 }
 
 .card-level-2{
-  background-color: yellow;
+  background-image: url("./assets/images/test-levelYellow.jpg");
 }
 
 .card-level-3{
-  background-color: green;
+  background-image: url("./assets/images/test-levelGreen.jpg");
 }
 
 .card-bottom {

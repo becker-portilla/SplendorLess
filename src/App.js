@@ -6,7 +6,7 @@ import Board from './components/game/board/board';
 function App() {
   sessionStorage.clear();
   return (
-    <Board PlayersQty={4}></Board>
+    <Board PlayersQty={6}></Board>
   );
 }
 

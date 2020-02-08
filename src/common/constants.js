@@ -7,4 +7,8 @@ const Gems = {
     YELLOW: "GOLD"
 }
 
-export default Gems;
+const Constants = {
+    CardsByRow : 5
+}
+
+export default {Gems, Constants};

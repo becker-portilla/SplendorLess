@@ -31,6 +31,16 @@ function GetCard(idCard){
 	return Cards.Cards.filter(x=>x.id === idCard)[0];
 }
 
+function GetNoble(idNoble){
+	return Cards.Nobles.filter(x=>x.id === idNoble)[0];
+}
+
+function GetNobles(qty){
+	let cards = Cards.Nobles.map(x=>x.id);
+	shuffle(cards);
+	return cards.slice(0, qty-1);
+}
+
 function GetCardsByLevel(level){
 	let cardsStorage = GetCardsFromStorage(level);
 	if(cardsStorage)
@@ -60,4 +70,4 @@ function GetDummyCard(){
 	return -1;
 }
 
-export default {shuffle, GetCard, GetCardsByLevel, SaveCardsByLevel, IsDummyCard, GetDummyCard}
+export default {shuffle, GetCard, GetCardsByLevel, SaveCardsByLevel, IsDummyCard, GetDummyCard, GetNoble, GetNobles}

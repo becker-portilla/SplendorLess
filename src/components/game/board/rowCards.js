@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from '../card/card';
-import Noble from '../card/noble';
 import Dummy from '../card/dummy';
 import Utils from '../../../common/utils';
+import Constants from '../../../common/constants';
 
 /*props: 
     Level (int)
@@ -24,11 +24,11 @@ function RowCards(props){
 
     return (<div className="cards-level">
         {<Dummy ClassStyle={"card card-level-" + level}></Dummy>}
-        {openCards.map(x=>{
+        {openCards.map((x,i)=>{
             if(Utils.IsDummyCard(x))
-                return (<Dummy ClassStyle="card-empty"></Dummy>)
+                return (<Dummy ClassStyle="card-empty" key={'CD' + i}></Dummy>)
             else
-                return (<Card IdCard={x} onClick={onClickCard} key={x}></Card>)
+                return (<Card IdCard={x} onClick={onClickCard} key={'C' + x}></Card>)
         })}
         </div>)
 }
@@ -36,7 +36,7 @@ function RowCards(props){
 function GetOpenCards(hiddenCards){
     let cards = [];
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < Constants.Constants.CardsByRow - 1; i++) {
         cards.push(hiddenCards.pop());
     }
 
@@ -50,7 +50,7 @@ function ChangeCard(toList, idCard, level){
     Utils.SaveCardsByLevel(fromList, level);
 
     for (let i = 0; i < toList.length; i++) {
-        if(toList[i] == idCard){
+        if(toList[i] === idCard){
             toList[i] = newCard;
             break;
         }

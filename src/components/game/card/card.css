@@ -98,6 +98,46 @@
     background-image: url("../../../assets/images/test-back25.jpg");
 }
 
+.card-MARY_STUART{
+    background-image: url("../../../assets/images/test-noble1.jpg");
+}
+
+.card-HENRY_VIII{
+    background-image: url("../../../assets/images/test-noble2.jpg");
+}
+
+.card-FRAN_FRANCE{
+    background-image: url("../../../assets/images/test-noble3.jpg");
+}
+
+.card-CHARLES_V{
+    background-image: url("../../../assets/images/test-noble4.jpg");
+}
+
+.card-ANN_BRITAN{
+    background-image: url("../../../assets/images/test-noble5.jpg");
+}
+
+.card-SUL_MAGNI{
+    background-image: url("../../../assets/images/test-noble6.jpg");
+}
+
+.card-NIC_MACHIA{
+    background-image: url("../../../assets/images/test-noble7.jpg");
+}
+
+.card-ISA_CASTILE{
+    background-image: url("../../../assets/images/test-noble8.jpg");
+}
+
+.card-ELI_AUSTRIA{
+    background-image: url("../../../assets/images/test-noble9.jpg");
+}
+
+.card-CAT_MEDICI{
+    background-image: url("../../../assets/images/test-noble10.jpg");
+}
+
 .card-gem-ONYX{
     background-image: url("../../../assets/images/onyx.png");
     background-repeat: no-repeat;

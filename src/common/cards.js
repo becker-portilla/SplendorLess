@@ -936,4 +936,37 @@ const Nobles = [
     }
 ];
 
-export default {Cards, Nobles};
+const Tokens = [
+    {
+        id:1,
+        gem: Constants.Gems.RED,
+        qty:7
+    },
+    {
+        id:2,
+        gem: Constants.Gems.BLACK,
+        qty:7
+    },
+    {
+        id:3,
+        gem: Constants.Gems.BLUE,
+        qty:7
+    },
+    {
+        id:4,
+        gem: Constants.Gems.GREEN,
+        qty:7
+    },
+    {
+        id:5,
+        gem: Constants.Gems.WHITE,
+        qty:7
+    },
+    {
+        id:6,
+        gem: Constants.Gems.YELLOW,
+        qty:5
+    }
+]
+
+export default {Cards, Nobles, Tokens};

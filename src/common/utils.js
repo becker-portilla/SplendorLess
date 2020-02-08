@@ -27,6 +27,10 @@ function shuffle (array) {
 
 };
 
+function GetToken(idToken){
+	return Cards.Tokens.filter(x=>x.id == idToken)[0];
+}
+
 function GetCard(idCard){
 	return Cards.Cards.filter(x=>x.id === idCard)[0];
 }
@@ -39,6 +43,10 @@ function GetNobles(qty){
 	let cards = Cards.Nobles.map(x=>x.id);
 	shuffle(cards);
 	return cards.slice(0, qty);
+}
+
+function GetTokens(){
+	return Cards.Tokens.map(x=>x.id);
 }
 
 function GetCardsByLevel(level){
@@ -70,4 +78,15 @@ function GetDummyCard(){
 	return -1;
 }
 
-export default {shuffle, GetCard, GetCardsByLevel, SaveCardsByLevel, IsDummyCard, GetDummyCard, GetNoble, GetNobles}
+export default {
+	shuffle, 
+	GetCard, 
+	GetCardsByLevel, 
+	SaveCardsByLevel, 
+	IsDummyCard, 
+	GetDummyCard, 
+	GetNoble, 
+	GetNobles, 
+	GetToken, 
+	GetTokens
+}

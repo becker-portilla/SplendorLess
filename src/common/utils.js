@@ -38,7 +38,7 @@ function GetNoble(idNoble){
 function GetNobles(qty){
 	let cards = Cards.Nobles.map(x=>x.id);
 	shuffle(cards);
-	return cards.slice(0, qty-1);
+	return cards.slice(0, qty);
 }
 
 function GetCardsByLevel(level){

@@ -1,29 +1,26 @@
 import React from 'react';
-import Utils from '../../../common/utils';
+import Grid from '@material-ui/core/Grid/Grid'
 import Dummy from '../card/dummy';
-import Token from '../token/token';
+import PlayerToken from '../token/token';
 
-function ColTokens(props){
+function RowTokens(props){
     const [tokens, setTokens] = props.StateTokens;
-
-    if(tokens.length === 0){
-        setTokens(Utils.GetTokens());
-    }
 
     const onClickToken = e => {
         setTokens(RemoveToken(tokens, e));
     };
 
-    return (<div>
+    return (<Grid container direction="row">
         {
             tokens.map((token, i) => {
                 if(token.qty === 0)
-                    return (<Dummy ClassStyle="token-empty" key={'TD' + i}></Dummy>)
+                    return (<Grid item key={'GRTD' + i}><Dummy ClassStyle="token-empty" key={'RTD' + i}></Dummy></Grid>);
                 else
-                    return <Token IdToken={token.id} onClick={onClickToken} key={'T' + token.id}></Token>
+                    return (<Grid item key={'GRT' + token.id} style={{marginLeft:30}}><PlayerToken IdToken={token.id} onClick={onClickToken} key={'RT' + token.id}></PlayerToken></Grid>);
+
             })
         }
-    </div>)
+    </Grid>)
 }
 
 function RemoveToken(listTokens, idToken){
@@ -36,4 +33,4 @@ function RemoveToken(listTokens, idToken){
     return listTokens.slice(0);
 }
 
-export default ColTokens;
+export default RowTokens;

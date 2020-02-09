@@ -12,6 +12,7 @@
 .card-empty{
   width: 140px;
   height: 230px;
+  margin: 10px;
   float: left;
 }
 
@@ -53,7 +54,6 @@
 .card-cost-gem{
   float: left;
   border-radius: 50%;
-  text-align: left;
   width: 30px;
   height: 30px;
   margin-bottom: 5px;
@@ -62,7 +62,6 @@
   font-size: 20px;
   text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
   text-align: center;
-  /* text-indent: -15px; */
   border-color: white;
   border-width: 2px;
   border-style: solid;
@@ -73,7 +72,8 @@
 }
 
 .cards-level:after,
-.card-top:after{
+.card-top:after,
+.token-container:after{
   content: "";
   display: table;
   clear: both;
@@ -107,4 +107,42 @@
 content: '';
 display: table;
 clear: both;
+}
+
+.token {
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  position: relative;
+  background-size: cover;
+  background-color: #E6CDA7;
+  border-radius: 50%;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  padding-left: 13px;
+  padding-top: 15px;
+  float: left;
+}
+
+.token-gem{
+  width: 55px;
+  height: 55px;
+}
+
+.token-empty{
+  width: 70;
+  height: 70px;
+  margin: 10px;
+}
+
+.token-qty{
+  font-size: 42px;
+  float: right;
+  float: right;
+  margin-top: 30px;
+}
+
+.token-container{
+  width: 150px;
 }

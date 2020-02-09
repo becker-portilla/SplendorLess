@@ -5,7 +5,6 @@ import './card.css';
   classStyle (string)
 */
 function Dummy(props) {
-    let card = props.Card;
     
   return (
   <div className={props.ClassStyle}>

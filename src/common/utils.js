@@ -28,7 +28,7 @@ function shuffle (array) {
 };
 
 function GetToken(idToken){
-	return Cards.Tokens.filter(x=>x.id == idToken)[0];
+	return Cards.Tokens.filter(x=>x.id === idToken)[0];
 }
 
 function GetCard(idCard){
@@ -46,7 +46,7 @@ function GetNobles(qty){
 }
 
 function GetTokens(){
-	return Cards.Tokens.map(x=>x.id);
+	return Cards.Tokens;
 }
 
 function GetCardsByLevel(level){

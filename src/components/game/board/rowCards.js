@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../card/card';
 import Dummy from '../card/dummy';
 import Utils from '../../../common/utils';
+import Svc from '../../../common/services';
 import Constants from '../../../common/constants';
 
 /*props: 
@@ -19,6 +20,7 @@ function RowCards(props){
     }
 
     const onClickCard = e => {
+        Svc.AddCardToPlayerBoard(e, 1);
         setOpenCards(ChangeCard(openCards, e, level));
     };
 

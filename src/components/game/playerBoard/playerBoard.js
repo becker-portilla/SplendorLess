@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid/Grid'
 import RowTokens from './rowTokens';
 import PlayerRowCards from './playerRowCards';
 import Util from '../../../common/utils';
-// import Svc from '../../../common/services';
+import Svc from '../../../common/services';
 
 function PlayerBoard(props){
     // const tokens = props.Tokens || [];
@@ -11,10 +11,17 @@ function PlayerBoard(props){
     // const noble = props.Noble || Util.GetDummyCard();
 
     // const [tokens, setTokens] = useState([]);
-    // const [cards, setCards] = useState([]);
+    const [cards, setCards] = useState([]);
     // const [noble, setNoble] = useState([]);
+
+    useEffect(()=>{
+        Svc.GetCardsPlayerBoard(1, (playerData) => {
+            setCards(playerData.cards);
+        });
+    }, []);
+
     const orderedTokens = GetOrderedTokens(Util.GetTokens());
-    const orderedCards = GetOrderedCards([1,2,43,44,45,76,77,78,90,35,55,67,68,8,25]);
+    // const orderedCards = GetOrderedCards([1,2,43,44,45,76,77,78,90,35,55,67,68,8,25]);
 
     return (
         <Grid container direction="column" justify="flex-start" alignItems="flex-start">
@@ -22,7 +29,7 @@ function PlayerBoard(props){
                 <RowTokens StateTokens={useState(orderedTokens)}></RowTokens>
             </Grid>
             <Grid item xs={12}>
-                <PlayerRowCards Cards={orderedCards}></PlayerRowCards>
+                <PlayerRowCards Cards={GetOrderedCards(cards)}></PlayerRowCards>
             </Grid>
         </Grid>
     );

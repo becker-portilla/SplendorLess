@@ -4,12 +4,14 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Svc from './common/services';
 import './App.css';
 import Board from './components/game/board/board';
 import PlayerBoard from './components/game/playerBoard/playerBoard';
 
 function App() {
   sessionStorage.clear();
+  Svc.InitFirebase();
   return (
     <Router>
       <Switch>

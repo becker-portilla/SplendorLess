@@ -1,4 +1,5 @@
-import * as firebase from 'firebase'
+import * as firebase from 'firebase';
+import Util from './utils';
 
 const InitFirebase = () => {
     const firebaseConfig = {
@@ -45,11 +46,20 @@ const AddCardToPlayerBoard = (cardId, playerId) => {
     });
 }
 
+const AddNewBoard = () => {
+    const db = firebase.database();
+    let code = Util.GetNewBoardCode();
+    db.ref('boards/' + code).set(Util.GetNewEmptyBoard(code));
+
+    return code;
+}
+
 export default {
     TakeToken,
     SusbribeTokenChange,
     UnsuscribeTokenChange,
     AddCardToPlayerBoard,
     InitFirebase,
-    GetCardsPlayerBoard
+    GetCardsPlayerBoard,
+    AddNewBoard
 }

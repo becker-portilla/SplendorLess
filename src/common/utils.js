@@ -78,6 +78,23 @@ function GetDummyCard(){
 	return -1;
 }
 
+function GetNewBoardCode(length){
+	let text = "";
+	length = length || 5;
+    const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < length; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+}
+
+function GetNewEmptyBoard(code){
+	return {
+		code: code,
+		players: []
+	}
+}
+
 export default {
 	shuffle, 
 	GetCard, 
@@ -88,5 +105,7 @@ export default {
 	GetNoble, 
 	GetNobles, 
 	GetToken, 
-	GetTokens
+	GetTokens,
+	GetNewBoardCode,
+	GetNewEmptyBoard
 }
